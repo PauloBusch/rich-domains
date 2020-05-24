@@ -19,7 +19,7 @@ namespace Payment.Tests
             bool valid
         ) {
             var doc = new Document(document, type);
-            Assert.Equals(doc.Valid, valid);
+            Assert.AreEqual(doc.Valid, valid);
         }
     }
 }
