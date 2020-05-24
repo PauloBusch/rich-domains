@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Payment.Domain.Services
+﻿namespace Payment.Domain.Services
 {
     public interface IEmailService
     {

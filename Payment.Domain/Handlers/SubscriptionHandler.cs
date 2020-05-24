@@ -27,7 +27,7 @@ namespace Payment.Domain.Handlers
             _emailService = emailService;
         }
 
-        public ICommandResult Handler(CreateBoletoSubscriptionCommand command)
+        public ICommandResult Handle(CreateBoletoSubscriptionCommand command)
         {
             // Fast validation
             command.Validate();
@@ -76,7 +76,7 @@ namespace Payment.Domain.Handlers
             return new CommandResult(true, "Success in signature");
         }
 
-        public ICommandResult Handler(CreatePayPalSubscriptionCommand command)
+        public ICommandResult Handle(CreatePayPalSubscriptionCommand command)
         {      
             // Fast validation
             command.Validate();

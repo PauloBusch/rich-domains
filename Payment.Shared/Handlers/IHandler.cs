@@ -7,6 +7,6 @@ namespace Payment.Shared.Handlers
 {
     public interface IHandler<T> where T : ICommand
     {
-        ICommandResult Handler(T command);
+        ICommandResult Handle(T command);
     }
 }
