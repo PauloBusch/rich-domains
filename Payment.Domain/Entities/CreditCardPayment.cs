@@ -1,4 +1,7 @@
 
+using Payment.Domain.ValueObjects;
+using System;
+
 namespace PaymentContext.Domain.Entities {
     public class CreditCardPayment : Payment {
         public string CardHolderName { get; private set; }

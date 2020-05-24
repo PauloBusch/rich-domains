@@ -8,12 +8,12 @@ namespace PaymentContext.Domain.Entities
 {
     public class Subscription : Entity
     {
-        private IList<Payment> _payments { get; set; }
+        private List<Payment> _payments { get; set; }
         public DateTime CreateDate { get; private set; }
         public DateTime LastUpdateDate { get; private set; }
         public DateTime? ExpireDate { get; private set; }
         public bool Active { get; private set; }
-        public IReadOnlyCollection<Payment> Payments { get => Payments.ToArray(); }
+        public IReadOnlyCollection<Payment> Payments { get => _payments.AsReadOnly(); }
 
         public Subscription(DateTime? expireDate) {
             this.CreateDate = DateTime.Now;

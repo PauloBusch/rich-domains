@@ -13,7 +13,7 @@ namespace PaymentContext.Domain.Entities {
         public decimal TotalPaid { get; private set; }
         public string Payer { get; private set; }
         public Document Document { get; private set; }
-        public string Address { get; private set; }
+        public Address Address { get; private set; }
         public Email Email { get; private set; }
 
         public Payment(
@@ -23,7 +23,7 @@ namespace PaymentContext.Domain.Entities {
             decimal totalPaid,
             string payer,
             Document document,
-            string address,
+            Address address,
             Email email
         ) {
             Number = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 10).ToUpper();
